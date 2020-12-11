@@ -28,6 +28,7 @@ Date	       Hour	   U_ms	           V_ms	          speed_ms	dir_degree
 01/06/2019	3	-0.6053566	-1.328725	1.46012559	24.49363452
 01/06/2019	4	-0.3656221	-1.279833	1.331034195	15.94355524
 ```
+I test per verificare la veridicità dei dati possono essere fatti andando a visionare le mappe di vento complete su GHOST   (http://10.10.0.14/osservazioni/interpolazione_statistica/)
 
 ## Esempio di disclaimer nell'invio dei dati (avvertenze per l'uso)
 ```
