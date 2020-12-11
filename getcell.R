@@ -3,7 +3,7 @@
 #http://www.geoin.it/coordinate_converter/
 
 library(raster)
-#Il seguente raster è preso di esempio, tanto sono tutti uguali
+#Il seguente raster è preso di esempio e salvato in locale... tanto sono tutti uguali!
 r <- raster("C:\\Users\\mazanetti\\Downloads\\Basiano\\VU_2019100100UTCplus1.txt")
 
 #Coordinate di esempio per lavoro su Concorezzo
