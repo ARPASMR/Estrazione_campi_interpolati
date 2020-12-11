@@ -4,15 +4,15 @@ _Procedura per estrazione dati da campi OI (Optimal Interpolation)_
 Si è reso necessario implementare uno script in grado di estrarre i dati da un punto di griglia interno alla matrice oraria già descritta in questa pagina. Nello specifico caso è servito il vento per un caso di molestie olfattive. Lo script è stato creato da Mauro Mussin e successivamente modificato e corretto da Matteo Zanetti e Antioco Vargiu.
 Si tratta quindi di conoscere il punto di griglia più vicino al sito di interesse, e per questo potrebbe essere utile eseguire lo script get_cell.R per individuare la "cella" corretta da estrarre.
 
-Per funzionare, lo script necessita di salvare in una cartella i file ASCII della variabile di interesse (componenti U e V nel caso del vento) disponibili su MEDIANO:
+Per funzionare, lo script necessita di salvare in una cartella i file ASCII della variabile di interesse (componenti U e V nel caso del vento) disponibili su MEDIANO, per tutti i giorni di interesse:
 
 ```
-/home/meteo/programmi/interpolazione_statistica/oi_ascii/archivio_ascii
+/home/meteo/programmi/interpolazione_statistica/oi_ascii/archivio_ascii/vento
 ```
 Il codice principale (extracting_wind.ipynb), scritto in Python e utilizzabile con Jupyter (anche in Anaconda), produce un file contenente data, ora e valori delle singole componenti del vento (U e V).
-A questo punto, al fine di produrre un file con il modulo della velocità (m/s) e la direzione (gradi sessagesimali), è necessario adattare ed eseguire lo script wind_speed_direction.R, con il quale si avrà il file "sistemato" da poter inviare all'utente interessato.
+A questo punto, al fine di produrre un file con il modulo della velocità (m/s) e la direzione (gradi sessagesimali), è necessario adattare ed eseguire lo script wind_speed_direction.R, con il quale si avrà il file "sistemato" da poter inviare all'utente interessato. Un esempio è caricato in repository (Vento_Concorezzo_202005.xlsx)
 
-_Istruzioni per il calcolo del modulo e la velocità del vento_
+_Istruzioni per il calcolo del modulo e la velocità del vento, contenute anche nel file R sopramenzionato_
 ```
 #Calcolo del modulo del vento (m/s) e della direzione (360 gradi)
 speed_ms = sqrt(df$U_ms^2 + df$V_ms^2)
